@@ -49,3 +49,11 @@ class User(AbstractUser):
    class Meta:
       db_table="user"
 
+class Person(models.Model):
+ 
+   mobile = models.CharField(max_length=12,unique=True)
+   name = models.CharField(max_length=50,null=False)
+   user_id = models.ForeignKey(User, on_delete=models.CASCADE,db_column="user_id")
+   class Meta:
+      db_table="person"
+
