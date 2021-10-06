@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'wallet.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rest_django',
+        'NAME': 'wallet',
         'HOST':'127.0.0.1',
         'USER':'faris404',
         'PORT':'3306',
@@ -132,4 +132,4 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.User'
