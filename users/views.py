@@ -68,7 +68,6 @@ class PearsonView(APIView):
       try:
          persons = Person.objects.filter(user_id=request.user.id)
          serializer = POTSPersonSerializer(persons,many=True).data
-         print(serializer)
          return JsonResponse({'message':"success",'data':serializer},status=status.HTTP_200_OK)
       except Exception as e:
          print(e)
